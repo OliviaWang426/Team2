@@ -12,7 +12,7 @@ public class HomePageSteps {
 
 	@Then("user is on the safeway practice site homepage")
 	public void navigateToHomePage() {
-		pages.homePage().navigate();
+		pages.safewayhomepage().navigate();
 	}
 
 	@When("user navigates to the login page")

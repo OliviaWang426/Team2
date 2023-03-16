@@ -20,16 +20,15 @@ public class SafewaySearchSteps {
 	
 
 	
-	@When("user enters text {string} in search box")
+	@When("user enters text {string} in search box and the submit")
 	public void user_enters_text_in_search_box(String Text) {
-		pages.homePage().enterSearchInformation(Text);
+		pages.safewaysearchPage().enterSearchInformation(Text);
 	}
 
 
 	@Then("user should see {string} search result is on the page")
-	public void user_should_see_search_result_is_on_the_page(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_should_see_search_result_is_on_the_page(String expectedInfo) {
+        pages.safewaysearchresultpage().validate(expectedInfo);
 	}
 
 }

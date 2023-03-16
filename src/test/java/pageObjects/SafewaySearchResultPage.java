@@ -1,5 +1,9 @@
 package pageObjects;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +15,7 @@ public class SafewaySearchResultPage {
 	// Local Variable
 		private WebDriver driver;
 //		Elements
-	@FindBy(how= How.XPATH,using="//span[@class='base']")
+	@FindBy(how= How.XPATH,using="//h1[@class='search--title']")
 	private WebElement searchResult;
 
 	// Constructor ?
@@ -21,16 +25,13 @@ public class SafewaySearchResultPage {
 	}
 
 	// Actions
-	public void validate(String expectedSearchInformaion) {
-		boolean contains = false;
-		if (searchResult.getText().contains(expectedSearchInformaion)) {
-			contains=true;
-		}
-	  assertTrue(contains,"the serch information is not contains");
+	public void validate(String expectedInfo) {
+		assertTrue(searchResult.getText().contains(expectedInfo), "the serch information is not contains");
 	}
 
+}
 
 		
-	}
+	
 
 
