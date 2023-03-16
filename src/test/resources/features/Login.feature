@@ -5,7 +5,7 @@ Feature: Login
   Scenario: Happy path login
     Given user is on the boratech practice site homepage
     When user navigates to the login page
-    And user enters username - "oliviawang426@gmail.com" and password - "Ring4261213!"
+    And user enters username - "oliviawang426@gmail.com" and password - "ring1213"
     And user clicks on the login button
     #Then user should be on the dashboard page
 
