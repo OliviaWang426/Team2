@@ -11,23 +11,25 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.DriverManager;
+import utilities.PageManager;
+import utilities.Util;
 
 public class SafewaySearchSteps {
 	private WebDriver driver = DriverManager.getInstance();
-	private String searchTerm;
+	private PageManager pages = PageManager.getInstance();
+	
 
 	
-	
-	
-	@When("user search for some items")
-	public void user_search_for_some_items() {
+	@When("user enters text {string} in search box")
+	public void user_enters_text_in_search_box(String Text) {
+		pages.homePage().enterSearchInformation(Text);
+	}
+
+
+	@Then("user should see {string} search result is on the page")
+	public void user_should_see_search_result_is_on_the_page(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("user should see some search results")
-	public void user_should_see_some_search_results() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
+}

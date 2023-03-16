@@ -11,7 +11,7 @@ public class PageManager {
 
 	
 	private LoginPage loginPage;
-	private HomePage homePage;
+	private SafewaySearchPage homePage;
 	private Navbar navbar;
 	private CommonPage commonPage;
 	private PageManager(WebDriver driver) {
@@ -38,13 +38,13 @@ public class PageManager {
 		}
 		return loginPage;
 	}
-
-
-	public HomePage homePage() {
+	public SafewaySearchPage homePage() {
 		if (homePage == null) {
-			homePage = new HomePage(driver);
+			homePage = new SafewaySearchPage(driver);
 		}
 		return homePage;
+		
+		
 		
 	}
 		public Navbar navbar() {

@@ -2,6 +2,7 @@ package uiStepDefinitions;
 
 import io.cucumber.java.en.*;
 import utilities.PageManager;
+import utilities.Util;
 
 public class LoginPageSteps {
 
@@ -15,7 +16,9 @@ public class LoginPageSteps {
 	@When("user clicks on the login button")
 	public void clickLogin() {
 		pages.loginPage().clickOnLoginButton();
+		Util.wait(3);
 	} 
+	
 
 	@Then("user should see an error alert with the message - {string}")
 	public void validateError(String expectedErrorMessage) {
