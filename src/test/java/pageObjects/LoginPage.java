@@ -10,16 +10,16 @@ public class LoginPage {
 
 	// Local Variable
 	private WebDriver driver;
-	private static final String URL = "https://boratech-practice-app.onrender.com/login";
+	private static final String URL = "https://www.safeway.com/";
 
 	// Elements
-	@FindBy(how = How.XPATH, using = "//input[@name='email']")
+	@FindBy(how = How.XPATH, using = "//input[@id='label-email']")
 	private WebElement emailField;
 
-	@FindBy(how = How.XPATH, using = "//input[@name='password']")
+	@FindBy(how = How.XPATH, using = "//input[@id='label-password']")
 	private WebElement passwordField;
 
-	@FindBy(how = How.XPATH, using = "//input[@value='Login']")
+	@FindBy(how = How.XPATH, using = "//input[@id='btnSignIn']")
 	private WebElement loginButton;
 
 	// Constructor
