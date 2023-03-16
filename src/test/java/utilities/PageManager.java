@@ -10,8 +10,10 @@ public class PageManager {
 	private WebDriver driver;
 
 	
-	private LoginPage loginPage;
-	private SafewaySearchPage homePage;
+	private SafewayLoginPage loginPage;
+	private SafewayHomePage safewayhomepage;
+	private SafewaySearchPage safewaysearchPage;
+	private SafewaySearchResultPage safewaysearchresultpage;
 	private Navbar navbar;
 	private CommonPage commonPage;
 	private PageManager(WebDriver driver) {
@@ -32,26 +34,31 @@ public class PageManager {
 	}
 
 
-	public LoginPage loginPage() {
+	public SafewayLoginPage loginPage() {
 		if (loginPage == null) {
-			loginPage = new LoginPage(driver);
+			loginPage = new SafewayLoginPage(driver);
 		}
 		return loginPage;
 	}
-	public SafewaySearchPage homePage() {
-		if (homePage == null) {
-			homePage = new SafewaySearchPage(driver);
+	public SafewaySearchPage safewaysearchPage() {
+		if (safewaysearchPage== null) {
+			safewaysearchPage = new SafewaySearchPage(driver);
 		}
-		return homePage;
-		
-		
-		
-	}
+		return safewaysearchPage;
+		}
+	
+	
 		public Navbar navbar() {
 			if (navbar == null) {
 				navbar = new Navbar(driver);
 			}
 			return navbar;
+		}
+		public SafewayHomePage safewayhomepage() {
+			if (safewayhomepage == null) {
+				safewayhomepage= new SafewayHomePage(driver);
+			}
+			return safewayhomepage;
 		}
 		
 		public CommonPage commonPage() {
@@ -59,6 +66,13 @@ public class PageManager {
 				commonPage = new CommonPage(driver);
 			}
 			return commonPage;
+		}
+
+		public SafewaySearchResultPage safewaysearchresultpage() {
+			if (safewaysearchresultpage == null) {
+				safewaysearchresultpage = new  SafewaySearchResultPage(driver);
+			}
+			return safewaysearchresultpage;
 		}
 
 }

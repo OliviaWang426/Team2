@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class SafewayLoginPage {
 
 	// Local Variable
 	private WebDriver driver;
@@ -23,7 +23,7 @@ public class LoginPage {
 	private WebElement loginButton;
 
 	// Constructor
-	public LoginPage(WebDriver driver) {
+	public SafewayLoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
