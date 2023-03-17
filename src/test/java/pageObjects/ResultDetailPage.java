@@ -8,20 +8,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.Util;
+
 public class ResultDetailPage {
 
 	private WebDriver driver;
 
-	@FindBy(how = How.XPATH, using = "((//img[@class='ab-lazy product-card-container__product-image loaded'])[1]")
+	@FindBy(how = How.XPATH, using = "(//div[@class='product-card-container__image-container mt-3'])[1]")
 	private WebElement firstItem;
 
-	@FindBy(how = How.XPATH, using = "//div[@class='quantity-stepper-container']")
+	@FindBy(how = How.XPATH, using = "//div[@class='product-btn product-btn--without-ar full-loading']")
 	private WebElement addButton;
 
-	@FindBy(how = How.XPATH, using = "//span[@class='menu-nav__cart button__item']")
+	@FindBy(how = How.XPATH, using = "(//*[name()='svg'][@class='svg-icon svg-icon-Cart-red'])[1]")
 	private WebElement cartButton;
 
-	@FindBy(how = How.XPATH, using = "//div[@class='mktp-cart-product-card cart-dst-product-card cart-dst-no-x-axis-padding']]")
+	@FindBy(how = How.XPATH, using = "(//div[@class='btn product-btn__add'])")
 	private WebElement addedItem;
 
 	public ResultDetailPage(WebDriver driver) {
@@ -32,6 +34,7 @@ public class ResultDetailPage {
 	// Actions
 	public void clickDetail() {
 		firstItem.click();
+		
 	}
 
 	public void clickAddButton() {
