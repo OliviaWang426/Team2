@@ -16,6 +16,8 @@ public class PageManager {
 	private SafewaySearchResultPage safewaysearchresultpage;
 	private Navbar navbar;
 	private CommonPage commonPage;
+	private ResultDetailPage resultDetailPage;
+	
 	private PageManager(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -73,6 +75,13 @@ public class PageManager {
 				safewaysearchresultpage = new  SafewaySearchResultPage(driver);
 			}
 			return safewaysearchresultpage;
+		}
+
+		public ResultDetailPage resultDetailPage() {
+			if(resultDetailPage == null) {
+				resultDetailPage =new ResultDetailPage(driver);
+			}
+			return resultDetailPage;
 		}
 
 }
