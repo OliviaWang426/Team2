@@ -21,8 +21,8 @@ public class SafewaySearchSteps {
 
 	
 	@When("user enters text {string} in search box and submit")
-	public void user_enters_text_in_search_box(String Text) {
-		pages.safewaysearchPage().enterSearchInformation(Text);
+	public void user_enters_text_in_search_box(String searchInformation) {
+		pages.safewaysearchPage().enterSearchInformation(searchInformation);
 	}
 
 
