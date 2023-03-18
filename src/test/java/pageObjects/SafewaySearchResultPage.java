@@ -11,16 +11,16 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class SafewaySearchResultPage {
-	
+
 	// Local Variable
-		private WebDriver driver;
+	private WebDriver driver;
 //		Elements
-	@FindBy(how= How.XPATH,using="//h1[@class='search--title']")
+	@FindBy(how = How.XPATH, using = "//h1[@class='search--title']")
 	private WebElement searchResult;
 
 	// Constructor ?
 	public SafewaySearchResultPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -30,8 +30,3 @@ public class SafewaySearchResultPage {
 	}
 
 }
-
-		
-	
-
-

@@ -26,7 +26,7 @@ public class SafewaySearchSteps {
 	}
 
 
-	@Then("user should see {string} search result is on the page")
+	@Then("user should see {string} search results on the page")
 	public void user_should_see_search_result_is_on_the_page(String expectedInfo) {
         pages.safewaysearchresultpage().validate(expectedInfo);
 	}
